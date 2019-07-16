@@ -22,7 +22,7 @@ Tests can be run separate from the package phase by running the following comman
 
 ## Usage
 
- to execute the program from inside the project folder please run the following command:
+ To execute the program from inside the project folder please run the following command:
  
   `java -cp target\autocompleteprovider-0.1.0.jar com.dkerchner.autocompleteprovider.AutocompleteProvider`
 
