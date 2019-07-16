@@ -64,7 +64,7 @@ public class AutocompleteProvider {
             return;
         }
 
-        String[] words = passage.split("\\s+");
+        String[] words = passage.toLowerCase().split("\\s+");
         if (words.length <= 1) {
             System.out.println("Error: more than one word is needed for training.");
             return;

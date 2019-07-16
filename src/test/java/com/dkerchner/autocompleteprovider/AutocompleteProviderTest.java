@@ -20,7 +20,7 @@ public class AutocompleteProviderTest {
     private AutocompleteProvider ac = new AutocompleteProvider();
 
     private final String testPassage1 = "Asymmetrik is the best";
-    private final String testPassage2 = "PiZZa is also the best";
+    private final String testPassage2 = "PiZZa is also the Best";
     private final String testPassage3 = "Bobby is just the worst";
 
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
@@ -89,7 +89,10 @@ public class AutocompleteProviderTest {
         ac.processLineOfInput(testPassage1);
         assertThat(outContent.toString(), containsString("Enter a passage or partial word (type \"exit!\" to quit):"));
         ac.processLineOfInput("a");
-        assertThat(outContent.toString(), containsString("Suggestion(s): \"Asymmetrik\" (1)"));
+        assertThat(outContent.toString(), containsString("Suggestion(s): \"asymmetrik\" (1)"));
+        ac.processLineOfInput(testPassage2);
+        ac.processLineOfInput("be");
+        assertThat(outContent.toString(), containsString("Suggestion(s): \"best\" (2)"));
     }
 
     /***

@@ -2,13 +2,23 @@
 
 Mobile Device Keyboard
 
+## Requirements
+
+* Java 8
+* Maven 3.6
+
 ## Installation
 
 Please run the following commands from inside the project folder:
 
 `mvn package`
 
-Make sure all the tests have passed. 
+## Tests
+
+Tests can be run separate from the package phase by running the following command from inside the project folder:
+
+`mvn test`
+
 
 ## Usage
 
@@ -26,3 +36,11 @@ If you've typed in a word fragment, you should get a list of the possible word m
 The confidence level signifies how often you've used that word which makes it likelier to be used again.
 
 Type `exit!` at any time to close the program.
+
+**Note**: All input is converted to lowercase and suggestions are given in lowercase.
+
+## Possible Improvements
+
+* An interactive UI
+* Add mockito or something similar to test that methods have been called correctly
+* More tests!
